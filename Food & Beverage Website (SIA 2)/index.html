@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mcdollibee - Food & Beverage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .hero {
+      background: linear-gradient(135deg, black, purple);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .menu-item img {
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .footer {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .modal-body img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mcdollibee</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>Welcome to Mcdollibee</h1>
+  <p>Your go-to place for the most delicious food and refreshing beverages.</p>
+</header>
+
+<!-- Slideshow -->
+<section class="container py-5">
+  <h2 class="text-center mb-4">Our Products</h2>
+  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="./Pictures/amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg" class="d-block w-100" alt="Burger"></div>
+      <div class="carousel-item"><img src="./Pictures/getulio-moraes-Wz3u9_GtkWc-unsplash.jpg" class="d-block w-100" alt="Pizza"></div>
+      <div class="carousel-item"><img src="./Pictures/pariwat-pannium-rzX8bOle9xs-unsplash.jpg" class="d-block w-100" alt="Coffee"></div>
+      <div class="carousel-item"><img src="./Pictures/mitchell-luo-ChXHveqrb28-unsplash.jpg" class="d-block w-100" alt="Fries"></div>
+      <div class="carousel-item"><img src="./Pictures/courtney-cook-66IZaW9LIpI-unsplash.jpg" class="d-block w-100" alt="Ice Cream"></div>
+      <div class="carousel-item"><img src="./Pictures/jugoslocos-QD4yCjlD44A-unsplash.jpg" class="d-block w-100" alt="Juice"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="container py-5">
+  <h2 class="text-center mb-4">Our Menu</h2>
+  <div class="row g-4">
+    <!-- Menu items -->
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#burgerModal">
+      <img src="./Pictures/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" class="img-fluid" alt="Burger">
+      <h4>Delicious Burger</h4><p>Made with 100% fresh ingredients.</p>
+    </div>
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#pizzaModal">
+      <img src="./Pictures/sahal-hameed-Nq9KlQTTEbQ-unsplash.jpg" class="img-fluid" alt="Pizza">
+      <h4>Hot & Crispy Pizza</h4><p>Freshly baked with a variety of toppings.</p>
+    </div>
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#coffeeModal">
+      <img src="./Pictures/nguyen-tong-hai-van-Q1ImlWMxOIM-unsplash.jpg" class="img-fluid" alt="Coffee">
+      <h4>Refreshing Coffee</h4><p>Brewed to perfection.</p>
+    </div>
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#friesModal">
+      <img src="./Pictures/matthew-reyes-5I5aqYJrdso-unsplash.jpg" class="img-fluid" alt="Fries">
+      <h4>Crispy Fries</h4><p>Golden and crispy, the perfect side to any meal.</p>
+    </div>
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#icecreamModal">
+      <img src="./Pictures/courtney-cook-SAh6q_MNuN0-unsplash.jpg" class="img-fluid" alt="Ice Cream">
+      <h4>Sweet Ice Cream</h4><p>Creamy and flavorful, available in multiple flavors.</p>
+    </div>
+    <div class="col-md-4 menu-item text-center" data-bs-toggle="modal" data-bs-target="#juiceModal">
+      <img src="./Pictures/olivier-guillard-AjG1BkDH4Zs-unsplash.jpg" class="img-fluid" alt="Juice">
+      <h4>Fresh Juices</h4><p>Stay refreshed with natural, freshly squeezed juices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Product Modals with images and "Add to Cart" -->
+<!-- BURGER -->
+<div class="modal fade" id="burgerModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Delicious Burger</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="Burger">
+    <p><strong>Description:</strong> Juicy grilled beef patty in a soft toasted bun.</p>
+    <p><strong>Ingredients:</strong> Beef patty, lettuce, tomato, cheese, pickles, bun, sauce</p>
+    <p><strong>Price:</strong> ₱150.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- PIZZA -->
+<div class="modal fade" id="pizzaModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Hot & Crispy Pizza</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/sahal-hameed-Nq9KlQTTEbQ-unsplash.jpg" alt="Pizza">
+    <p><strong>Description:</strong> Oven-fresh pizza with golden crust and melty cheese.</p>
+    <p><strong>Ingredients:</strong> Dough, tomato sauce, mozzarella, pepperoni, bell peppers, olives</p>
+    <p><strong>Price:</strong> ₱299.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- COFFEE -->
+<div class="modal fade" id="coffeeModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Refreshing Coffee</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/nguyen-tong-hai-van-Q1ImlWMxOIM-unsplash.jpg" alt="Coffee">
+    <p><strong>Description:</strong> Rich and aromatic brewed coffee, perfect for your day.</p>
+    <p><strong>Ingredients:</strong> Ground coffee beans, water, milk (optional), sugar</p>
+    <p><strong>Price:</strong> ₱80.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- FRIES -->
+<div class="modal fade" id="friesModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Crispy Fries</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/matthew-reyes-5I5aqYJrdso-unsplash.jpg" alt="Fries">
+    <p><strong>Description:</strong> Thin-cut fries fried to golden perfection.</p>
+    <p><strong>Ingredients:</strong> Potatoes, salt, vegetable oil</p>
+    <p><strong>Price:</strong> ₱65.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- ICE CREAM -->
+<div class="modal fade" id="icecreamModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Sweet Ice Cream</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/courtney-cook-SAh6q_MNuN0-unsplash.jpg" alt="Ice Cream">
+    <p><strong>Description:</strong> Creamy and delightful ice cream with multiple flavors.</p>
+    <p><strong>Ingredients:</strong> Milk, cream, sugar, flavoring (chocolate, vanilla, etc.)</p>
+    <p><strong>Price:</strong> ₱99.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- JUICE -->
+<div class="modal fade" id="juiceModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Fresh Juices</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <img src="./Pictures/olivier-guillard-AjG1BkDH4Zs-unsplash.jpg" alt="Juice">
+    <p><strong>Description:</strong> Freshly squeezed fruit juice to energize your day.</p>
+    <p><strong>Ingredients:</strong> Assorted fruits (orange, mango, apple), water, sugar (optional)</p>
+    <p><strong>Price:</strong> ₱70.00</p>
+    <button class="btn btn-success">Add to Cart</button>
+  </div></div></div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="bg-light py-5">
+  <div class="container text-center">
+    <h2>About Us</h2>
+    <p>We are passionate about serving the best food and drinks with top-notch quality.</p>
+    <h4 class="mt-4">History</h4>
+    <p>Mcdollibee began as a small food stall and grew into a beloved food brand.</p>
+    <h4>Philosophy</h4>
+    <p>Food should bring happiness and connection.</p>
+    <h4>Core Values</h4>
+    <p>Quality, Customer Satisfaction, Integrity, Teamwork, Innovation</p>
+    <h4>Mission</h4>
+    <p>To serve delicious and affordable food that brings people together.</p>
+    <h4>Vision</h4>
+    <p>To be the most loved food and beverage brand in every community we serve.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5 text-center">
+  <h2>Contact Us</h2>
+  <p>Company: Mcdollibee Food Corp</p>
+  <p>Owner: Dharyll Cruzante</p>
+  <p>Email: Food&Bev@mcdollibee.com | Phone: 09991112332</p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us Now</button>
+</section>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <h5 class="modal-title">Contact Us</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div><div class="modal-body">
+    <form>
+      <div class="mb-3"><label class="form-label">Your Name</label><input type="text" class="form-control" placeholder="Enter your name"></div>
+      <div class="mb-3"><label class="form-label">Your Email</label><input type="email" class="form-control" placeholder="Enter your email"></div>
+      <div class="mb-3"><label class="form-label">Your Order</label><textarea class="form-control" rows="3" placeholder="Write your order here"></textarea></div>
+    </form>
+  </div><div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Send Message</button>
+  </div></div></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Mcdollibee. All rights reserved.</p>
+  <p>Follow us:
+    <a href="https://www.facebook.com/Mcdollibee/" class="text-white">Facebook</a>,
+    <a href="https://www.instagram.com/aura/" class="text-white">Instagram</a>,
+    <a href="https://www.twitter.com/aura/" class="text-white">Twitter</a>
+  </p>
+</footer>
+
+</body>
+</html>
